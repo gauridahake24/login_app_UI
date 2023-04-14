@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_project_one/home.dart';
+import 'package:my_project_one/signup.dart';
 
 class Signinpage extends StatelessWidget {
   const Signinpage({Key? key}) : super(key: key);
@@ -65,25 +66,21 @@ class Signinpage extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Homepage()),
+            );
+          },
           child: const Text(
             "Login",
             style: TextStyle(fontSize: 20),
-
-
           ),
           style: ElevatedButton.styleFrom(
             shape: const StadiumBorder(),
             padding: const EdgeInsets.symmetric(vertical: 16),
           ),
-          onLongPress: (){
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (Context) => Homepage()),
-            );
-
-        },
-        )
+        ),
       ],
     );
   }
@@ -97,7 +94,11 @@ class Signinpage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text("Don't have an account? "),
-        TextButton(onPressed: () {}, child: const Text("Sign Up"))
+        TextButton(onPressed: () {Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => Signuppage()),
+    );
+    }, child: const Text("Sign Up"))
       ],
     );
   }

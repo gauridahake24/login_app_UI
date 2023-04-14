@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_project_one/home.dart';
+import 'package:my_project_one/signin.dart';
 
 class Signuppage extends StatelessWidget {
   const Signuppage({Key? key}) : super(key: key);
@@ -63,7 +65,12 @@ class Signuppage extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Homepage()),
+            );
+          },
           child: const Text(
             "Create Account",
             style: TextStyle(fontSize: 20),
@@ -72,7 +79,7 @@ class Signuppage extends StatelessWidget {
             shape: const StadiumBorder(),
             padding: const EdgeInsets.symmetric(vertical: 16),
           ),
-        )
+        ),
       ],
     );
   }
@@ -82,7 +89,14 @@ class Signuppage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text("Already have an account? Login here "),
-        TextButton(onPressed: () {}, child: const Text("Sign in"))
+        TextButton(onPressed: () {
+         Navigator.push(
+         context,
+         MaterialPageRoute(builder: (context) => Signinpage()),
+    );
+    }, child: const Text("Sign in"))
+
+
       ],
     );
   }

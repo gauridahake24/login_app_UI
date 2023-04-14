@@ -1,29 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:my_project_one/home.dart';
 import 'package:my_project_one/signin.dart';
-import 'package:flutter/widgets.dart';
+import 'package:my_project_one/splashscreen.dart';
+
 void main() {
   runApp(const Myapp());
 }
-class Myapp extends StatefulWidget{
+
+class Myapp extends StatelessWidget {
   const Myapp({Key? key}) : super(key: key);
 
   @override
-   _MyappState createState() => _MyappState();
-}
-class _MyappState extends State<Myapp> {
-  @override
-  Widget build (BuildContext context){
+  Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title:'flutter app',
-      theme: ThemeData(primarySwatch: Colors.blue
-      ),
-
-    
-    home: const Signinpage(),
+      title: 'My app',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => SplashScreen(),
+        '/signin': (context) => Signinpage(),
+        '/home': (context) => Homepage(),
+      },
     );
-
   }
 }
-
