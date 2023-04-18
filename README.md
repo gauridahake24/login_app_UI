@@ -36,12 +36,6 @@ If you'd like to contribute to this project, please follow these guidelines:
 Authors
 Gauri Dahake - gauridahake24@gmail.com
 
-Acknowledgments
-Thanks to the Flutter team for creating such a great framework.
-Thanks to the Firebase team for providing an easy-to-use authentication service.
-
-
-
 /*Currently Working On Firebase Google and Facebook Authentication 🙂*/
 
 
